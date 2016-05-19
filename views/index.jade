@@ -1,0 +1,9 @@
+include ./header.jade
+each post in posts
+  p: h2: a(href='/u/#{post.name}/#{post.time.day}/#{post.title}') #{post.title}
+  p(class='info')
+    |作者:
+    a(href='#') #{post.name}
+    |日期: #{post.time.day}
+  p #{post.post}
+include ./footer.jade

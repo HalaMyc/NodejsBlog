@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Blog
+    style
+      include ../public/stylesheets/style.css
+  body
+    header
+      h1 #{title}
+    nav
+      a(title='主页', href='/') home
+      if user
+        a(title='发表', href='/post') post
+        a(title='登出', href='/logout') logout
+      else
+        a(title='登录', href='/login') login
+        a(title='注册', href='/reg') register
+  article
